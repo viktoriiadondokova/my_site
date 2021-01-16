@@ -1,0 +1,251 @@
+
+/*
+Основные цвета:
+Skyblue: #fff - фон
+Dimgrey: #696969 (105, 105, 105) - шрифт
+MediumSeaGreen: #3CB371 (60, 179, 113) - меню
+Шрифт: BEBAS NEUE REGULAR, HeinrichScript
+Сделаем меню горизонтальным, уберем маркеры
+и сделаем отступы
+*/
+
+/*Применили центрирование элементов на всех страницах и установили белый фон*/
+body
+{
+    background-position: center;
+    background-color: #fff;
+    width: 80%;
+    margin: auto;
+}
+/*Установили фоновое изображение на приветственную страницу*/
+.welcomepage body
+{
+    background-image: url(images/smeraldo.jpg);
+    background: no-repeat;
+}
+
+.language
+{
+    width:100%; /*ширина блока с кнопкой*/
+    text-align:center; /*центральное расположение блока с кнопкой*/
+    
+}
+/*Задали цвет "кнопки", отменили подчеркивание у ссылки, которое было задано по 
+умолчанию, задали цвет шрифта, тип шрифта, округлили "кнопку" и сделали отступы*/
+.button1 a, .button2 a
+{
+    
+    color: #696969;
+    text-decoration: none;
+    border: 2px #fff solid;
+    background-color: #fff;
+    border-radius: 10px;
+    padding:10px;
+    font: 20px HeinrichScript, Times New Roman, Verdana, sans-serif; /*шрифт кнопки*/
+} 
+
+/*Стиль "кнопки" при наведении на нее курсора*/
+.button1 a:hover, .button2 a:hover
+{
+    color: #000000;
+    background-color: #ccc; /*Задали цвет "кнопки", когда на нее будет наведен 
+    курсор*/
+}
+
+.button1 
+{
+    
+    margin: auto; /*расположили кнопку посередине блока*/
+    position: absolute; /*сделали ей абсолютную позицию*/
+    top: 180px; /*расположили чуть ниже заголовков*/
+    right: 550px;
+    
+}
+.button2
+{
+    margin: auto; /*расположили кнопку посередине блока*/
+    position: absolute; /*сделали ей абсолютную позицию*/
+    top: 180px; /*расположили чуть ниже заголовков*/
+    left: 550px;
+}
+
+/*Расположили блок с заголовками по центру и с отступом сверху*/
+#welcomepage .header
+{
+    text-align: center;
+    margin-top: 50px;
+}
+
+/*изменили шрифт заголовков*/
+.header h2
+{
+    font: 30px BEBAS HEUE REGULAR,Times New Roman, Verdana, sans-serif;
+    color: #696969; 
+}
+
+/*установили блок "подвала" по центру*/
+#footer 
+{
+    width:100%;
+    text-align:center;
+    
+}
+
+/*установили изображение по центру и внизу, его размер*/
+#footer img
+{
+  
+  width:20px;
+  position:relative;
+  margin: auto; /*расположили кнопку посередине блока*/
+  bottom: 0px; 
+  
+}
+
+#mainpage
+{
+    background-color: #fff;
+}
+
+#mainpage #content h2
+{
+  font: BEBAS NEUE REGULAR, Times New Roman, Verdana, sans-serif;
+  color: #696969;
+  position: absolute;
+  right: 600px;
+  top: 150px;
+}
+
+.сокр
+{
+    color: #ccc;
+}
+#mainpage #content img
+{
+   position: absolute;
+   left: 150px; 
+   top: 300px;
+}
+#mainpage #content p
+{
+    font: 20px Times New Roman, Verdana, sans-serif;
+    width: 400px;
+    position: absolute;
+    left: 450px;
+    top:300px;
+    color:#696969;
+    
+}
+
+
+
+nav ul
+{
+    list-style: none; /*убираем маркеры списка*/
+    margin:0;
+    padding:0;
+}
+
+/*стилизуем ссылки*/
+nav a 
+{
+    display:block;
+    text-decoration:none;
+    outline:none;
+    transition: .4s ease-in-out;
+    
+}
+.topmenu
+{
+    backface-visibility: hidden;
+    background: #3CB371;
+}
+.topmenu > li
+{
+    display: inline-block;
+    position:relative;
+}
+.topmenu > li > a
+{
+    font: Times New Roman, Verdana, sans-serif;
+    height: 70px;
+    line-height: 70px;
+    padding: 0 30px;
+    color: #696969;
+    text-transform: uppercase;
+}
+.down:after
+{
+  content: "\f107";
+  margin-left: 8px;
+  font:Times New Roman, Verdana, sans-serif;
+}
+.topmenu li a:hover {color:#000000;}
+
+.submenu
+{
+  background: white;
+  border: 2px solid #003559;
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 5;
+  width: 150px;
+  transform: perspective(600px) rotateX(-90deg);
+  transform-origin: 0% 0%;
+  transition: .6s ease-in-out;
+}
+
+.topmenu > li:hover .submenu{
+  visibility: visible;
+  opacity: 1;
+  transform: perspective(600px) rotateX(0deg);
+}
+.submenu li a {
+  color: #7f7f7f;
+  font-size: 13px;
+  line-height: 36px;
+  padding: 0 25px;
+  font-family: 'Kurale', serif;
+}
+
+#легенда h1, #legend h1
+{
+    text-align: center;
+    margin-top: 50px;
+    color: #696969;
+    font: BEBAS HEUE REGULAR,Times New Roman, Verdana, sans-serif;
+}
+#легенда p, #legend p
+{
+    text-align: center;
+    margin-top: 50px;
+    color: #696969;
+    font: 20px BEBAS HEUE REGULAR,Times New Roman, Verdana, sans-serif; 
+}
+#blog p, #mentions p, #упоминания p 
+{
+    text-align: center;
+    font: 20px Times New Roman, Verdana, sans-serif;
+    color:#696969;
+}
+blockquote
+{
+    text-align: center;
+    font: 25px HeinrichScript, Times New Roman, Verdana, sans-serif;
+    color:#000000;
+}
+#blog img, #mentions img, #упоминания img
+{
+    margin-top: 30px;
+    width:700px;
+    height: 700px;
+    
+}
+#blog h2
+{
+    text-align: center;
+    font: Times New Roman, Verdana, sans-serif;
+    color:#696969;
+}
